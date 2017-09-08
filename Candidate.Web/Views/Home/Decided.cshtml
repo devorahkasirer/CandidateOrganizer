@@ -1,0 +1,24 @@
+﻿@using Candidate.Data
+@model Candidate.Web.Models.CandidatesViewModel
+
+<h1>@Model.Decision Candidates</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Notes</th>
+    </tr>
+    @foreach (Applicant a in Model.Candidates)
+    {
+        <tr>
+            <td>@a.FirstName</td>
+            <td>@a.LastName</td>
+            <td>@a.Email</td>
+            <td>@a.Number</td>
+            <td>@a.Note</td>
+        </tr>
+    }
+</table>
